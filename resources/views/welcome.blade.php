@@ -19,6 +19,9 @@
 <div class="form-group">
 <button type="submit" class="btn btn-success">Add</button>
 </div>
+<div>
+    <table><td></td></table>
+</div>
 </form>
 <hr>
 <ol>
