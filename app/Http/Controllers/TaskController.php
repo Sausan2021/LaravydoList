@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class TaskController extends Controller
 {
     public function index(){
-        $tasks = Task::where("iscompleted", false)->orderBy("id", "DEC")->get();
+        $tasks = Task::where("iscompleted", false)->orderBy("id")->get();
         $completed_tasks = Task::where("iscompleted", true)->get();
         return view("welcome", compact("tasks", "completed_tasks"));
         }

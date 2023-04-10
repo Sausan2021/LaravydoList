@@ -17,7 +17,7 @@ use App\Http\Controllers\TaskController;
 
 
 Route::get("/", "App\Http\Controllers\TaskController@index");
-Route::post("/task", "TaskController@store");
-Route::get("/{id}/complete", "TaskController@complete");
-Route::get("/{id}/delete", "TaskController@destroy");
+Route::post("/task", "App\Http\Controllers\TaskController@store");
+Route::get("/{id}/complete", "App\Http\Controllers\TaskController@complete");
+Route::get("/{id}/delete", "App\Http\Controllers\TaskController@destroy");
 
