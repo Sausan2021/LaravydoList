@@ -20,7 +20,28 @@
 <button type="submit" class="btn btn-success">Add</button>
 </div>
 <div>
-    <table><td></td></table>
+    <table class="table table-bordered  border-blue">
+        <tr  class="bg-primary">
+        <th>#</th>
+        <th>{{__('Task Name')}}</th>
+        <th>{{__('Is task completed')}}</th>
+        </tr>
+
+        @foreach ($tasks as $key => $taskd)
+        <tr>
+            <td>{{ $key + 1 }} </td>
+            <td>{{ $taskd->task }}</td>
+            <td>{{ $tasked->Iscompleted}}</td>
+
+                <form action="{{ url('/task'.$taskd->id) }}" method="POST">
+                    @csrf
+                <button class="btn btn-primary btn-sm  mb-2">{{__('Delete')}}</button>
+            </td>
+
+        @endforeach
+        </tr>
+
+    </table>
 </div>
 </form>
 <hr>
